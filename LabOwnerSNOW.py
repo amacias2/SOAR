@@ -3,7 +3,7 @@ import json
 import os
 import csv
 import nexpose
-
+#Uploading data into a table in SNOW
 
 #Variables
 client_ID = '<insert client id here>'
@@ -39,30 +39,11 @@ else:
 client.set_token(store['token'])
 
 # We should now be good to go. Let's define a `Resource` for the incident API.
-incident_resource = client.resource(api_path='/table/u_lab_owners')
-with open('C:\\Users\\am185471\\Documents\\Lab By Lab Breakdown 6-6.csv','r') as f:
+lab_owner_resource = client.resource(api_path='/table/<table name>')
+with open('<insert file location>','r') as f:
     reader= csv.DictReader(f)
     for row in reader:
-
-
-snow_format = {}
-for key, val in critical_vuln.items():
-    snow_format['u_'+ key] = val
-incident_resource.create(snow_format)
-
-'''# Fetch the first record in the response
-records = incident_resource.get(query={'number': 'INC0275511'}, stream=True)
-record_dict = records.first()
-
-with open('record', 'w') as f:
-    json_string = json.dumps(record_dict, indent=4)
-    f.write(json_string)
-
-print (json_string)
-
-for record in records.all():
-    print(record)
-
-
-'''
-
+        lab_row = {}
+        for key, value in row.items():
+            lab_row['u_' + key.lower().replace(' ', '_')] = value
+        lab_owner_resource.create(lab_row)
