@@ -43,7 +43,19 @@ critical_vulns = nexpose.generate_report()
 critical_vuln = critical_vulns[5]
 snow_format = {}
 for key, val in critical_vuln.items():
-    snow_format['u_'+ key] = val
+    print(val)
+    val2 = val.replace('.','_')
+    print(val2)
+    if(key == 'ip_address' or key =='mac_address') and val != '':
+        num = 0
+        for char in val:
+            if char != '.':
+                cint = int(char)
+                num = num*10 + cint
+        print(num)
+        snow_format['u_'+ key] = val2
+    else:
+        snow_format['u_' + key] = val
 incident_resource.create(snow_format)
 
 '''# Fetch the first record in the response
