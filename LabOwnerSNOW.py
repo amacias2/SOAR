@@ -10,7 +10,8 @@ client_ID = '<insert client id here>'
 instance = '<insert instance name>'
 word_of_pass= '<insert field>'
 store = {'token': None}
-
+print('please do not run, duplicatation of data will occur')
+exit(0)
 
 # Takes care of refreshing the token storage if needed
 def updater(new_token):
