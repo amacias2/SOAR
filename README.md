@@ -1,3 +1,4 @@
-![Image of SOAR](https://i.imgur.com/g89b9Na.png) <p> What is SOAR</p> 
+<img style="float: left;"https://i.imgur.com/g89b9Na.png">
+ 
 
   Security Orchestration Automation Response 
