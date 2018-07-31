@@ -17,10 +17,6 @@ These instructions will get you a copy of the project up and running on your loc
 -Rapid7 Nexpose<br>
 -Service Now 
 
-```
-Give examples
-```
-
 ### Installing
 
 Download Python 2.7 and install the libraries listed in the prerequisites. Make sure to have admin access and credentials to ForeScout, Rapid7 Nexpose, and ServiceNow to be able to successfully test policies, workflows, and the code. 
