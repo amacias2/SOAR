@@ -12,8 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 -Python 2.7 <br>
 -<a href="https://github.com/rbw0/pysnow">Pysnow Library</a><br>
--<a href="https://github.com/rbw0/pysnow">Rapid7 Nexpose Library</a><br>
--<a href="https://github.com/rbw0/pysnow">SharePoint Library</a><br>
+-<a href="https://github.com/rapid7/vm-console-client-python/blob/master/rapid7vmconsole/rest.py">Rapid7 Nexpose Library</a><br>
 -Forescout CounterAct<br>
 -Rapid7 Nexpose<br>
 -Service Now 
