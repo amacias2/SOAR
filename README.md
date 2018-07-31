@@ -49,22 +49,13 @@ Run it on the requested server and implement [ ... ]
 
 -Automate monthly security reports on dashboards in ServiceNow 
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+ Alondra Macias, Avanthika Ramesh, Nathan Michelena 
 
 ## Acknowledgments
+Thank you <a href="https://github.com/rbw0/pysnow">Pysnow Library</a> and <a href="https://github.com/rapid7/vm-console-client-python/blob/master/rapid7vmconsole/rest.py">Rapid7 Nexpose Library</a>. <br>
 
+Another thank you to Scott, Kumar, Abishek, John, Nathan, Shlomo, Matt, and Noah for their help and advice throughout this whole process. 
 
 
 <br>
