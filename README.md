@@ -25,7 +25,7 @@ Download Python 2.7 and install the libraries listed in the prerequisites. Make 
 
 
 ## The Code
-<b>nexpose.py</b> - REST API that generates csv reports from the most recent Rapid7 Nexpose scans into a readable format for ServiceNow. Using the <a href="https://help.rapid7.com/nexpose/en-us/warehouse/warehouse-schema.html">Nexpose ER Diagram</a>, the SQL query below can be easily edited to add or remove additional columns of information in the final generated report.<br> 
+<b>nexpose.py</b> - REST API that generates csv reports from the most recent Rapid7 Nexpose scans into a readable format for ServiceNow. Using the <a href="https://help.rapid7.com/nexpose/en-us/warehouse/warehouse-schema.html">Nexpose ER Diagram</a>, the SQL query below can be easily customized to add or remove additional columns of information in the final generated report.<br> 
 ```
 report_id = create_report_sql(report_client, 'vulnReport', '''
     select da.asset_id, da.mac_address, da.ip_address, das.port, dv.vulnerability_id, 
