@@ -48,11 +48,11 @@ Run it on the requested server and implement [ ... ] curl, wgit
 
 ### Success Criteria
 
--ForeScout detects all connected endpoint devices on the network
--All new devices are added to ServiceNow's `cmdb_ci_computer` table 
--Labs with a CVSS score of 8-10 are automatically quarantined through ForeScout
--Labs detected with a vulnerability must have an incident ticket created. Incidents with a high CVSS score are prioritized and sent immediately to the IR team. 
--All lab owners will receive an email when their lab device has been quarantined or a vulnerability has been detected 
+-ForeScout detects all connected endpoint devices on the network<br>
+-All new devices are added to ServiceNow's `cmdb_ci_computer` table<br>
+-Labs with a CVSS score of 8-10 are automatically quarantined through ForeScout<br>
+-Labs detected with a vulnerability must have an incident ticket created. Incidents with a high CVSS score are prioritized and sent immediately to the IR team. <br>
+-All lab owners will receive an email when their lab device has been quarantined or a vulnerability has been detected <br>
 -All lab devices will have a point of contact, so that if an issue were to arise, contact can quickly be made.
 
 ### Stretch Goals 
