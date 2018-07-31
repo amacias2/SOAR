@@ -40,7 +40,7 @@ report_id = create_report_sql(report_client, 'vulnReport', '''
 
 ```
 <b>LabOwnerSNOW.py</b> - Populates the `lab owners` table in ServiceNow with data from a static excel file containing IP ranges and lab owners. <br>
-<b>SNOW.py</b> - Automatically populates
+<b>SNOW.py</b> - Automatically creates and populates an incident table using the 
 
 ### Break down into end to end tests
 
