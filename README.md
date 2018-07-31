@@ -22,7 +22,7 @@ These instructions will get you a copy of the project up and running on your loc
 Download Python 2.7 and install the libraries listed in the prerequisites. Make sure to have admin access and credentials to ForeScout, Rapid7 Nexpose, and ServiceNow to be able to successfully test policies, workflows, and the code. 
 
 
-## Running the tests
+## The Code
 <b>nexpose.py</b> - REST API that generates csv reports from the most recent Rapid7 Nexpose scans into a readable format for ServiceNow. Using the <a href="https://help.rapid7.com/nexpose/en-us/warehouse/warehouse-schema.html">Nexpose ER Diagram</a>, the SQL query below can be easily editted to add or remove additional columns of information in the final generated report.<br> 
 ```
 report_id = create_report_sql(report_client, 'vulnReport', '''
@@ -41,7 +41,7 @@ report_id = create_report_sql(report_client, 'vulnReport', '''
 
 ## Deployment
 
-Run it on the requested server and implement [ . ]
+Run it on the requested server and implement [ ... ]
 
 ## Stretch Goals 
 
@@ -51,10 +51,6 @@ Run it on the requested server and implement [ . ]
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
