@@ -39,14 +39,14 @@ report_id = create_report_sql(report_client, 'vulnReport', '''
 <b>lab_owner_snow.py</b> -  Filter through the `lab owners` table and match the first octect of the IP address associated with a critical vulnerability from the Nexpose scan report to find the name of the lab owner.<br><br>
 <b>MatchOwner.py</b> - imports the `get_lab_owner_by_ip` method from the <b>lab_owner_snow.py</b> and match the whole IP address with one of the IP addresses from the `lab owners` table.   
 
-## Deployment
+### Deployment
 
 Run it on the requested server and implement [ ... ] curl, wgit
 
-## Common Errors
+### Common Errors
 -In Nexpose, need
 
-## Success Criteria
+### Success Criteria
 
 -ForeScout detects all connected endpoint devices on the network
 -All new devices are added to ServiceNow's `cmdb_ci_computer` table 
@@ -55,7 +55,7 @@ Run it on the requested server and implement [ ... ] curl, wgit
 -All lab owners will receive an email when their lab device has been quarantined or a vulnerability has been detected 
 -All lab devices will have a point of contact, so that if an issue were to arise, contact can quickly be made.
 
-## Stretch Goals 
+### Stretch Goals 
 
 -Implementation of Carbon Black, McAfee, and other security tools during the scanning and remediation phase, so that the information can be consolidated and pulled to populate the ticket <br> 
 
@@ -66,7 +66,7 @@ Run it on the requested server and implement [ ... ] curl, wgit
 ## Authors
  Alondra Macias, Avanthika Ramesh, Nathan Michelena 
 
-## Acknowledgments
+### Acknowledgments
 Thank you <a href="https://github.com/rbw0/pysnow">Pysnow Library</a> and <a href="https://github.com/rapid7/vm-console-client-python/blob/master/rapid7vmconsole/rest.py">Rapid7 Nexpose Library</a>. <br>
 
 Another thank you to Scott Theriault, Kumar, Awasti Abhishek, John Weaver, Nathan Michelena, Shlomo Bielak, Matt Cole, and Noah Heil for their help and advice throughout this whole process. 
