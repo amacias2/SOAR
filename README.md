@@ -35,8 +35,8 @@ report_id = create_report_sql(report_client, 'vulnReport', '''
 
 ```
 <b>LabOwnerSNOW.py</b> - Populates the `lab owners` table in ServiceNow with data from a static excel file containing IP ranges and lab owners. <br>
-<b>SNOW.py</b> - Automatically creates and populates an incident table using the report generated from Rapid7 Nexpose. <br>
-<b>lab_owner_snow.py</b> -  Filter through the `lab owners` table and match the first octect of the IP address associated with a critical vulnerability from the Nexpose scan report to find the name of the lab owner.<br>
+<br><b>SNOW.py</b> - Automatically creates and populates an incident table using the report generated from Rapid7 Nexpose. <br><br>
+<b>lab_owner_snow.py</b> -  Filter through the `lab owners` table and match the first octect of the IP address associated with a critical vulnerability from the Nexpose scan report to find the name of the lab owner.<br><br>
 <b>MatchOwner.py</b> - imports the `get_lab_owner_by_ip` method from the <b>lab_owner_snow.py</b> and match the whole IP address with one of the IP addresses from the `lab owners` table.   
 
 ## Deployment
