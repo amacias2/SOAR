@@ -41,7 +41,11 @@ report_id = create_report_sql(report_client, 'vulnReport', '''
 
 ## Deployment
 
-Run it on the requested server and implement [ ... ] curl, wgit
+##### Windows
+Deploy with as a scheduled task
+
+##### Linux
+Deploy as a cronjob
 
 ## Common Errors
 -In Nexpose, need
@@ -50,7 +54,7 @@ Run it on the requested server and implement [ ... ] curl, wgit
 
 -ForeScout detects all connected endpoint devices on the network<br>
 -All new devices are added to ServiceNow's `cmdb_ci_computer` table<br>
--Labs with a CVSS score of 8-10 are automatically quarantined through ForeScout<br>
+-Labs with a CVSS score of 7-10 are automatically quarantined through ForeScout<br>
 -Labs detected with a vulnerability must have an incident ticket created. Incidents with a high CVSS score are prioritized and sent immediately to the IR team. <br>
 -All lab owners will receive an email when their lab device has been quarantined or a vulnerability has been detected <br>
 -All lab devices will have a point of contact, so that if an issue were to arise, contact can quickly be made.
@@ -64,14 +68,13 @@ Run it on the requested server and implement [ ... ] curl, wgit
 -Have the lab owner information, which is currently a static excel, dynamically updated and pulled into ServiceNow 
 
 ## Authors
- Alondra Macias, Avanthika Ramesh, Nathan Michelena 
+ Alondra Macias, Avanthika Ramesh, Dabin Cheon, Yousef Bajes, Jordan Bates
 
 ### Acknowledgments
 Thank you <a href="https://github.com/rbw0/pysnow">Pysnow Library</a> and <a href="https://github.com/rapid7/vm-console-client-python/blob/master/rapid7vmconsole/rest.py">Rapid7 Nexpose Library</a>. <br>
 
 Another thank you to Scott Theriault, Kumar, Awasti Abhishek, John Weaver, Nathan Michelena, Shlomo Bielak, Matt Cole, and Noah Heil for their help and advice throughout this whole process. 
 
-Finally, thank you to the rest of the SOAR team for helping in the other aspects of this project: Dabin Cheon, Jordan Bates, and Yousef Bajes
 
 
 <br>
