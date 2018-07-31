@@ -46,6 +46,7 @@ Run it on the requested server and implement [ ... ]
 ## Stretch Goals 
 
 -Implementation of Carbon Black, McAfee, and other security tools during the scanning and remediation phase, so that the information can be consolidated and pulled to populate the ticket <br> 
+
 -Automate monthly security reports on dashboards in ServiceNow 
 
 ## Contributing
