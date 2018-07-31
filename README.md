@@ -55,7 +55,7 @@ Run it on the requested server and implement [ ... ] curl wgit
 ## Acknowledgments
 Thank you <a href="https://github.com/rbw0/pysnow">Pysnow Library</a> and <a href="https://github.com/rapid7/vm-console-client-python/blob/master/rapid7vmconsole/rest.py">Rapid7 Nexpose Library</a>. <br>
 
-Another thank you to Scott, Kumar, Abishek, John, Nathan, Shlomo, Matt, and Noah for their help and advice throughout this whole process. 
+Another thank you to Scott Theriault, Kumar, Awasti Abhishek, John Weaver, Nathan Michelena, Shlomo Bielak, Matt Cole, and Noah Heil for their help and advice throughout this whole process. 
 
 Finally, thank you to the rest of the SOAR team for helping in the other aspects of this project: Dabin Cheon, Jordan Bates, and Yousef Bajes
 
