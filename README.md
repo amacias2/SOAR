@@ -11,14 +11,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 -Python 2.7 <br>
--<a href="https://github.com/rbw0/pysnow">Pysnow Library</a>
-
--<a href="https://github.com/rbw0/pysnow">Pysnow Library</a>
-
--Forescout CounterAct
-
--Rapid7 Nexpose
-
+-<a href="https://github.com/rbw0/pysnow">Pysnow Library</a><br>
+-<a href="https://github.com/rbw0/pysnow">Rapid7 Nexpose Library</a><br>
+-<a href="https://github.com/rbw0/pysnow">SharePoint Library</a><br>
+-Forescout CounterAct<br>
+-Rapid7 Nexpose<br>
 -Service Now 
 
 ```
@@ -32,7 +29,7 @@ Download Python 2.7 and install the libraries listed in the prerequisites. Make 
 
 ## Running the tests
 
-_LabOwnerSNOW.py_
+_LabOwnerSNOW.py_: Populates the '''lab owners''' table 
 
 ### Break down into end to end tests
 
