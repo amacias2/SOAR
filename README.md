@@ -28,23 +28,26 @@ Download Python 2.7 and install the libraries listed in the prerequisites. Make 
 
 
 ## Running the tests
+<b>nexpose.py</b> - REST API that generates csv reports from the most recent Rapid7 Nexpose scans into a readable format for ServiceNow. Using the <a href="https://help.rapid7.com/nexpose/en-us/warehouse/warehouse-schema.html">Nexpose ER Diagram</a>, the SQL query below can be easily editted to add or remove additional columns of information in the final generated report.<br> 
+```
+report_id = create_report_sql(report_client, 'vulnReport', '''
+    select da.asset_id, da.mac_address, da.ip_address, das.port, dv.vulnerability_id, 
+        dv.title, dv.description, dv.severity, dv.cvss_score, dv.exploits, dv.nexpose_id
+    from fact_asset_vulnerability_finding as fpr 
+    join dim_vulnerability as dv on fpr.vulnerability_id = dv.vulnerability_id 
+    join dim_asset as da on fpr.asset_id = da.asset_id 
+    join dim_asset_service as das on fpr.asset_id = das.asset_id''')
 
-_LabOwnerSNOW.py_: Populates the '''lab owners''' table 
+```
+<b>LabOwnerSNOW.py</b> - Populates the `lab owners` table in ServiceNow with data from a static excel file containing IP ranges and lab owners. <br>
+<b>SNOW.py</b> - Automatically populates
 
 ### Break down into end to end tests
 
 Explain what these tests test and why
 
-```
-Give an example
-```
 
-### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
 ```
 
 ## Deployment
