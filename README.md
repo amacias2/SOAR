@@ -11,7 +11,15 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 -Python 2.7 <br>
--<a href="https://github.com/rbw0/pysnow">pysnow library</a>
+-<a href="https://github.com/rbw0/pysnow">Pysnow Library</a>
+
+-<a href="https://github.com/rbw0/pysnow">Pysnow Library</a>
+
+-Forescout CounterAct
+
+-Rapid7 Nexpose
+
+-Service Now 
 
 ```
 Give examples
@@ -19,25 +27,12 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Download Python 2.7 and install the libraries listed in the prerequisites. Make sure to have admin access and credentials to ForeScout, Rapid7 Nexpose, and ServiceNow to be able to successfully test policies, workflows, and the code. 
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+_LabOwnerSNOW.py_
 
 ### Break down into end to end tests
 
@@ -91,7 +86,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 
 <br>
-<h1>How it Works</h1>
-Utilizing the <a href="https://github.com/rbw0/pysnow">pysnow library</a> and 
-
- 
