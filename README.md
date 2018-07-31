@@ -39,22 +39,14 @@ report_id = create_report_sql(report_client, 'vulnReport', '''
 <b>lab_owner_snow.py</b> -  Filter through the `lab owners` table and match the first octect of the IP address associated with a critical vulnerability from the Nexpose scan report to find the name of the lab owner.<br>
 <b>MatchOwner.py</b> - imports the `get_lab_owner_by_ip` method from the <b>lab_owner_snow.py</b> and match the whole IP address with one of the IP addresses from the `lab owners` table.   
 
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Run it on the requested server and implement [ . ]
 
-## Built With
+## Stretch Goals 
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+-Implementation of Carbon Black, McAfee, and other security tools during the scanning and remediation phase, so that the information can be consolidated and pulled to populate the ticket <br> 
+-Automate monthly security reports on dashboards in ServiceNow 
 
 ## Contributing
 
@@ -76,9 +68,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
 
 <br>
