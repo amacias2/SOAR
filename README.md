@@ -34,6 +34,9 @@ report_id = create_report_sql(report_client, 'vulnReport', '''
     join dim_asset_service as das on fpr.asset_id = das.asset_id''')
 
 ```
+##### Generated reports are found in the Reports tab in Rapid7 Nexpose:<br>
+
+<img src="https://i.imgur.com/TMBPKey.png">
 <b>LabOwnerSNOW.py</b> - Populates the `u_lab_owners_list` table in ServiceNow with data from a static excel file containing IP ranges and lab owners. <br>
 <br><b>SNOW.py</b> - Automatically creates and populates an incident table using the report generated from Rapid7 Nexpose. <br><br>
 <b>lab_owner_snow.py</b> -  Filter through the `lab owners` table and match the first octect of the IP address associated with a critical vulnerability from the Nexpose scan report to find the name of the lab owner.<br><br>
@@ -48,7 +51,12 @@ Deploy with as a scheduled task
 Deploy as a cronjob
 
 ## Common Errors
--In Nexpose, need
+-When running `nexpose.py` make sure that the name of the to-be generated report does not already exist in the Nexpose 'Reports' tab. Another option is to make sure the report file is deleted after it is generated.<br>
+
+##### Example: 
+``` 
+report_id = create_report_sql(report_client,'vulnReport', '''
+```
 
 ## Success Criteria
 
