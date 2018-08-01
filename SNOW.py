@@ -1,63 +1,25 @@
-import pysnow
-import json
-import os
-import nexpose
+
+    # This file defines a method to upload data into an incident ticket on SNOW
+
+def upload_vuln_incident(snow_client, critical_vuln, lab_owner_row):
 
 
-#Variables
-client_ID = '<insert client id here>'
-instance = '<insert instance name>'
-word_of_pass= '<insert field>'
-store = {'token': None}
+    # Defining a `Resource` for the incident API.
+    incident_resource = snow_client.resource(api_path='/table/incident')
 
-# Takes care of refreshing the token storage if needed
-def updater(new_token):
-    print("OAuth token refreshed!")
-    store['token'] = new_token
+    # Put keys in SNOW table format
+    snow_format = {}
+    for key, val in critical_vuln.items():
+        snow_format['u_' + key] = val
 
-# Create the OAuthClient with the ServiceNow provided `client_id` and `client_secret`, and a `token_updater`
-# function which takes care of refreshing local token storage.
-client = pysnow.OAuthClient(client_id=client_ID, client_secret=word_of_pass,
-                            token_updater=updater, instance=instance)
+    # Add lab owner info to ticket
+    try:
+        snow_format['u_lab_owner'] = lab_owner_row['u_lab_manager_name']
+    except Exception as e:
+        snow_format['u_lab_owner'] = "N/A"
+        print(e)
 
-if os.path.exists('token'):
-    with open ('token', 'r') as f:
-        store['token'] = json.load(f)
-
-else:
-    # No previous token exists. Generate new.
-    username = raw_input("Enter Username: ")
-    word_of_pass = raw_input("Enter Password: ")
-    store['token'] = client.generate_token(username, word_of_pass)
-    print (store['token'])
-    with open('token', 'w') as f:
-        f.write(json.dumps(store['token']))
-
-# Set the access / refresh tokens
-client.set_token(store['token'])
-
-# We should now be good to go. Let's define a `Resource` for the incident API.
-incident_resource = client.resource(api_path='/table/incident')
-
-critical_vulns = nexpose.generate_report()
-critical_vuln = critical_vulns[7]
-snow_format = {}
-for key, val in critical_vuln.items():
-    snow_format['u_'+ key] = val
-incident_resource.create(snow_format)
-
-'''# Fetch the first record in the response
-records = incident_resource.get(query={'number': 'INC0275511'}, stream=True)
-record_dict = records.first()
-
-with open('record', 'w') as f:
-    json_string = json.dumps(record_dict, indent=4)
-    f.write(json_string)
-
-print (json_string)
-
-for record in records.all():
-    print(record)
-
-
-'''
+    try:
+        incident_resource.create(snow_format)
+    except Exception as e:
+        print("FAILED TO CREATE INCIDENT: {0}".format(e))
